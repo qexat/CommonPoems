@@ -1,0 +1,24 @@
+##=
+The recursive Fibonacci is as much a classic as the "Hello, World!" program. 
+
+Its definition is extremely simple and straightforward: given the first
+elements 0 and 1, every next element is the sum of the previous two.
+
+As such, the beginning of the sequence up to 100 looks like this:
+    0 1 1 2 3 5 8 13 21 34 55 89
+
+`fib` is a function that returns the `n`-th element of this sequence.
+##=
+
+# Base case, i.e. the first two elements of the sequence
+forall n in {0, 1} :: let fib(n) = n
+
+# Recursive definition of the following elements
+forall n : Nat where n > 1 :: let fib(n) = fib(n - 2) + fib(n - 1)
+
+let tests = do
+    assert fib(0) = 0
+    assert fib(1) = 1
+    assert fib(2) = 1
+    assert fib(10) = 55
+end

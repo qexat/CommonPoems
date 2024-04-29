@@ -1,0 +1,4 @@
+# Table of Contents of the package -- it is also used by the docs builder
+
+- fib = fib::fib
+- are_anagrams = anagrams::are_anagrams

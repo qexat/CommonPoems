@@ -1,0 +1,12 @@
+# *- .gitignore template for Ode -* #
+
+# distribution, builds, artefacts
+build/
+dist/
+
+# local cache - used by ode, troubadour, bookbinder, hearsal, ...
+.caches/
+
+# environment
+.env
+.venv

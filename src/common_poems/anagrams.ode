@@ -1,0 +1,27 @@
+##=
+Two words are anagrams if re-arranging the letters of the first term can give
+the second one.
+
+One simple - albeit slow - way of doing it is to check if sorting both strings
+give the same result.
+##=
+
+# AlphaString is a refined string type that can only contain "letters".
+# It includes a good amount of non-english characters as well, although it
+# cannot cover all of them because of the complexity of some alphabets.
+# In our case, however, it is good enough.
+use Types.AlphaString
+
+forall s1 : AlphaString, s2 : AlphaString ::
+    let are_anagrams(s1, s2) =
+        s1.caseless().sort() = s2.caseless().sort()
+
+let tests = do
+    assert are_anagrams("race", "care")
+    assert are_anagrams("OrcHestra", "carthorse")
+    assert are_anagrams("anagram", "GrAManA")
+
+    assert not are_anagrams("poem", "song")
+    assert not are_anagrams("poem", "drawing")
+    assert not are_anagrams("banana", "bnanan")
+end

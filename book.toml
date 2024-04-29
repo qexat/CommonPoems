@@ -1,0 +1,34 @@
+[book]
+name = "Common Poems"
+id = "common-poems"
+version = "0.1.0"
+license = "LICENSE"
+
+[[book.authors]]
+name = "Qexat"
+email = "contact@qexat.com"
+gpg = "75954ED39F92EDEB"
+
+[[book.links]]
+repository = "https://github.com/qexat/CommonPoems"
+
+[[book.package]]
+source = "common_poems"
+
+[book.builder]
+runner = "bookbinder"
+dependencies = ["bookbinder"]
+
+[book.documentation]
+readme = "README.md"
+
+[book.lint.config]
+mode = "strict"
+
+[book.tests]
+runner = "hearsal"
+dependencies = ["hearsal"]
+
+[book.tests.config]
+coverage = "strict"
+infile = true
