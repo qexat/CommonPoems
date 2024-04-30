@@ -7,7 +7,7 @@ license = "LICENSE"
 [[book.authors]]
 name = "Qexat"
 email = "contact@qexat.com"
-gpg = "75954ED39F92EDEB"
+gpg = "557A6757ABE3462AC6752A8653D2C985654B68A3"
 
 [[book.links]]
 repository = "https://github.com/qexat/CommonPoems"
